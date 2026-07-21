@@ -8,6 +8,7 @@ export interface KnowledgeDocument {
 
 const KNOWLEDGE_DIR = path.join(
   process.cwd(),
+  "src",
   "knowledge"
 );
 
