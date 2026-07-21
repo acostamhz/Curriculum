@@ -4,6 +4,9 @@ import { useRef, useState } from "react";
 
 import { UIMessage } from "./types";
 
+import { parseTools } from "@/assistant/parser";
+import { runTools } from "@/assistant/run-tools";
+
 export function useAssistant() {
   const [messages, setMessages] = useState<UIMessage[]>([
     {
@@ -74,6 +77,8 @@ export function useAssistant() {
 
       const decoder = new TextDecoder();
 
+      let fullResponse = "";
+
       while (true) {
         const { done, value } = await reader.read();
 
@@ -83,19 +88,41 @@ export function useAssistant() {
           stream: true,
         });
 
+        fullResponse += chunk;
+
         setMessages((prev) =>
           prev.map((msg) =>
             msg.id === assistantId
               ? {
                   ...msg,
-                  content: msg.content + chunk,
+                  content: fullResponse,
+                }
+              : msg
+          )
+        );
+      }
+
+      const parsed = parseTools(fullResponse);
+
+      if (parsed.tools.length > 0) {
+        runTools(parsed.tools);
+
+        setMessages((prev) =>
+          prev.map((msg) =>
+            msg.id === assistantId
+              ? {
+                  ...msg,
+                  content: parsed.text,
                 }
               : msg
           )
         );
       }
     } catch (error) {
-      if (error instanceof DOMException && error.name === "AbortError") {
+      if (
+        error instanceof DOMException &&
+        error.name === "AbortError"
+      ) {
         console.log("Generation stopped.");
       } else {
         console.error(error);

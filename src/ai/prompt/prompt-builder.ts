@@ -1,11 +1,18 @@
 import { ChatMessage } from "../memory/types";
+
 import { systemPrompt } from "../system-prompt";
 import { buildPortfolioContext } from "../portfolio-context";
 
-export function buildPrompt(
+import { searchKnowledge } from "../rag/search";
+
+export async function buildPrompt(
   message: string,
   history: ChatMessage[]
-): string {
+): Promise<string> {
+  const knowledge = await searchKnowledge(
+    message
+  );
+
   const historyText = history
     .map(
       (item) => `
@@ -20,6 +27,10 @@ ${item.content}
 ${systemPrompt}
 
 ${buildPortfolioContext()}
+
+Relevant knowledge:
+
+${knowledge}
 
 Conversation history:
 

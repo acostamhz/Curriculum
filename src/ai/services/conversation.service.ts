@@ -13,7 +13,10 @@ export async function chat(
 
   const history = getHistory(sessionId);
 
-  const prompt = buildPrompt(message, history);
+  const prompt = await buildPrompt(
+    message,
+    history
+  );
 
   const reply = await askGemini(prompt);
 
