@@ -17,26 +17,35 @@ export default function MessageList({
 }: Props) {
   const bottomRef = useRef<HTMLDivElement>(null);
 
+  // Evita hacer scroll en el primer render
+  const firstRender = useRef(true);
+
   useEffect(() => {
+    if (firstRender.current) {
+      firstRender.current = false;
+      return;
+    }
+
     bottomRef.current?.scrollIntoView({
       behavior: "smooth",
+      block: "end",
     });
   }, [messages, isLoading]);
 
   return (
-  <>
-    <div className="space-y-4">
-      {messages.map((message) => (
-        <Message
-          key={message.id}
-          message={message}
-        />
-      ))}
+    <>
+      <div className="space-y-4">
+        {messages.map((message) => (
+          <Message
+            key={message.id}
+            message={message}
+          />
+        ))}
 
-      {isLoading && <TypingIndicator />}
-    </div>
+        {isLoading && <TypingIndicator />}
+      </div>
 
-    <div ref={bottomRef} />
-  </>
-);
+      <div ref={bottomRef} />
+    </>
+  );
 }
