@@ -294,7 +294,7 @@ certifications: {
 
       year: "2020",
 
-      credential: "#",
+      credential: "/certificates/English.pdf",
     },
 
     {
@@ -304,7 +304,7 @@ certifications: {
 
       year: "2026",
 
-      credential: "#",
+      credential: "https://www.uao.edu.co/programa/ingenieria-informatica/",
     },
     
     {
