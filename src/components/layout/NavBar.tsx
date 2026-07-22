@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 import { Menu } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
@@ -36,14 +37,14 @@ export default function Navbar() {
     >
       <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6">
         {/* Logo */}
-        <Link
-          href="/"
-          className="group flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 backdrop-blur-md transition-all duration-300 hover:border-blue-500 hover:bg-white/10"
-        >
-          <span className="bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-sm font-bold text-transparent">
-            JA
-          </span>
-        </Link>
+        <Link href="/" className="flex items-center">
+  <img
+  src="/favicon.png"
+  alt="Logo"
+  width={42}
+  height={42}
+/>
+</Link>
 
         {/* Navigation */}
         <nav className="hidden md:block">
