@@ -20,7 +20,7 @@ export default function ContactCTA() {
           size="lg"
           className="rounded-full px-10 py-7 text-base"
         >
-          Let's Work Together
+          Let's work together
         </Button>
       </a>
     </motion.div>

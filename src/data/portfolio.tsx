@@ -1,3 +1,12 @@
+import {
+  BookOpen,
+  Goal,
+  Film,
+  Gamepad2,
+  CarFront,
+  Cpu,
+} from "lucide-react";
+
 export const portfolio = {
   // ==========================
   // Personal Information
@@ -14,7 +23,7 @@ export const portfolio = {
 
   location: "Colombia",
 
-  email: "tu_correo@ejemplo.com",
+  email: "acostadevice@gmail.com",
 
   github: "https://github.com/acostamhz",
 
@@ -44,26 +53,26 @@ export const portfolio = {
 
     heading: "Building software that solves real-world business problems.",
 
-    description: `I'm a Software Engineering student passionate about backend development,
+    description: `I'm a Software Engineering graduate passionate about backend development,
     artificial intelligence and cybersecurity. I enjoy creating scalable
     applications, learning new technologies and designing solutions that
     combine clean architecture with exceptional user experiences.`,
 
     stats: [
       {
-        value: "1+",
-        label: "Year Learning",
+        value: "2",
+        label: "Years Learning",
       },
       {
         value: "3+",
         label: "Projects",
       },
       {
-        value: "3+",
-        label: "Certifications",
+        value: "6+",
+        label: "Education & Certifications",
       },
       {
-        value: "10+",
+        value: "15+",
         label: "Technologies",
       },
     ],
@@ -74,28 +83,35 @@ export const portfolio = {
   heading: "My journey from software engineering student to AI entrepreneur.",
 
   description:
-    "Driven by curiosity, continuous learning and entrepreneurship, every milestone has strengthened my ability to design secure, scalable and intelligent software solutions.",
+    "Driven by curiosity, continuous learning and entrepreneurship, every milestone has strengthened my ability to design secure, scalable and intelligent software solutions. Graduated with a semester average of 4.5/5.0 according to university statistics.",
 
   items: [
     {
-      year: "2023",
+      year: "2020",
       title: "Software Engineering",
       description:
         "Started my Software Engineering degree at Universidad Autónoma de Occidente, building a strong foundation in programming, algorithms and software architecture.",
     },
 
     {
-      year: "2024",
+      year: "2023",
       title: "Healthcare Platform",
       description:
         "Developed a university project focused on supporting Alzheimer's patients through a digital healthcare platform.",
     },
 
     {
-      year: "2025",
+      year: "2024",
       title: "Founded Grupo Caishen S.A.S.",
       description:
         "Created my own technology company to develop innovative software products and AI-driven business solutions.",
+    },
+
+    {
+      year: "2025",
+      title: "Founded Hobisu™",
+      description:
+        "Currently driving the growth of an Apple device import and distribution business, delivering premium technology products with a focus on quality, reliability, and customer experience.",
     },
 
     {
@@ -163,6 +179,34 @@ stack: {
         "Prompt Engineering",
       ],
     },
+    {
+      name: "Cloud",
+      items: [
+        "Vercel",
+        "Railway",
+        "Google Cloud",
+        "Firebase",
+      ],
+    },
+    {
+      name: "Tools",
+      items: [
+        "VS Code",
+        "Postman",
+        "GitHub",
+        "Figma",
+      ],
+    },
+    {
+      name: "Frontend",
+      items: [
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "HTML5",
+        "CSS3",
+      ],
+    },
   ],
 },
 projects: {
@@ -202,9 +246,9 @@ projects: {
 
       image: "/projects/grupo-caishen.png",
 
-      github: "#",
+      github: "https://github.com/acostamhz/Landing",
 
-      demo: "#",
+      demo: "https://www.caishen.com.co/es",
 
       technologies: [
         "Next.js",
@@ -221,7 +265,7 @@ projects: {
 
       image: "/projects/healthcare.png",
 
-      github: "#",
+      github: "https://github.com/khrszna/DoURemember/tree/Camilo",
 
       demo: "#",
 
@@ -234,42 +278,63 @@ projects: {
   ],
 },
 certifications: {
-  title: "Certifications",
+  title: "Education & Certifications",
 
   heading: "Continuous learning is part of my engineering mindset.",
 
   description:
-    "Beyond university education, I continuously expand my knowledge through certifications in databases, artificial intelligence, cybersecurity and finance.",
+    "My academic background, language studies and professional certifications reflect my commitment to continuous learning in software engineering, artificial intelligence, databases, cybersecurity and finance.",
 
   items: [
-    {
-      title: "Database Administrator",
 
-      issuer: "Oracle Academy",
+    {
+      title: "English Language Course B1",
+
+      issuer: "Centro Cultural Colombo Americano",
+
+      year: "2020",
+
+      credential: "#",
+    },
+
+    {
+      title: "Software Engineering",
+
+      issuer: "Universidad Autónoma de Occidente",
 
       year: "2026",
 
       credential: "#",
+    },
+    
+    {
+      title: "Database Administrator",
+
+      issuer: "IBM Professional Certificate",
+
+      year: "2026",
+
+      credential: "/certificates/Database Administrator.pdf",
     },
 
     {
       title: "AI Engineering",
 
-      issuer: "Professional Certification",
+      issuer: "IBM Professional Certificate",
 
       year: "2026",
 
-      credential: "#",
+      credential: "/certificates/AI Engineering.pdf",
     },
 
     {
       title: "Financial Markets",
 
-      issuer: "Professional Certification",
+      issuer: "Yale University",
 
       year: "2026",
 
-      credential: "#",
+      credential: "/certificates/Mercados Financieros.pdf",
     },
 
     {
@@ -279,14 +344,62 @@ certifications: {
 
       year: "In Progress",
 
-      credential: "#",
+      credential:
+        "https://virtual.uao.edu.co/posgrado/especializacion-en-ciberseguridad/",
+    },
+  ],
+},
+interests: {
+  title: "Beyond Code",
+
+  heading: "What I enjoy outside software engineering.",
+
+  description:
+    "Beyond writing code, I enjoy activities that inspire creativity, discipline and continuous learning.",
+
+  items: [
+    {
+      title: "Reading",
+      description:
+        "I enjoy books about technology, entrepreneurship, finance and personal development.",
+      icon: <BookOpen className="h-8 w-8" />,
+    },
+    {
+      title: "Football",
+      description:
+        "Playing football helps me stay active, competitive and work better as part of a team.",
+      icon: <Goal className="h-8 w-8" />,
+    },
+    {
+      title: "Movies",
+      description:
+        "I enjoy science fiction, thrillers and films based on true stories.",
+      icon: <Film className="h-8 w-8" />,
+    },
+    {
+      title: "Video Games",
+      description:
+        "Video games combine technology, design and strategy.",
+      icon: <Gamepad2 className="h-8 w-8" />,
+    },
+    {
+      title: "Automotive",
+      description:
+        "I'm passionate about cars, engineering and automotive innovation.",
+      icon: <CarFront className="h-8 w-8" />,
+    },
+    {
+      title: "Technology",
+      description:
+        "I love discovering new gadgets and emerging technologies.",
+      icon: <Cpu className="h-8 w-8" />,
     },
   ],
 },
 contact: {
   title: "Contact",
 
-  heading: "Let's Build Something Great Together.",
+  heading: "Let's build something great together.",
 
   description:
     "I'm always interested in ambitious ideas involving artificial intelligence, backend engineering, cybersecurity and startups.",
@@ -294,8 +407,8 @@ contact: {
   items: [
     {
       title: "Email",
-      value: "acostadevices@icloud.com",
-      href: "mailto:acostadevices@icloud.com",
+      value: "acostadevice@gmail.com",
+      href: "mailto:acostadevice@gmail.com",
     },
 
     {
@@ -313,17 +426,17 @@ contact: {
     {
       title: "Location",
       value: "Santiago de Cali, Colombia",
-      href: "#",
+      href: "https://maps.app.goo.gl/o4QowNmNzNx96W1H7",
     },
   ],
 },
 assistant: {
-  title: "Meet My AI",
+  title: "Meet June",
 
-  heading: "Ask My AI Anything.",
+  heading: "Ask June Anything.",
 
   description:
-    "This AI has been trained with my professional experience, projects, technical skills and certifications. Feel free to ask anything about my background.",
+    "Just Unified Neural Engine has been trained with my professional experience, projects, technical skills and certifications. Feel free to ask anything about my background.",
 
   suggestions: [
     "Tell me about yourself",
@@ -333,5 +446,6 @@ assistant: {
     "Why cybersecurity?",
     "Show your certifications",
   ],
+  
 },
 };

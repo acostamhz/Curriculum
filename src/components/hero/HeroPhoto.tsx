@@ -36,7 +36,7 @@ export default function HeroPhoto() {
             alt="Jhoan Camilo Acosta"
             fill
             priority
-            className="object-cover object-[65%_center]"
+            className="object-cover object-[54%_center]"
           />
         </div>
 

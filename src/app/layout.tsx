@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Jhoan Camilo Acosta",
+  title: "Jhoan Camilo - Junior Software Engineer",
   description:
     "Software Engineer | Cybersecurity Specialist | AI Builder",
 };

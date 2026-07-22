@@ -11,6 +11,7 @@ const links = [
   { name: "Journey", href: "#timeline" },
   { name: "Projects", href: "#projects" },
   { name: "Stack", href: "#stack" },
+  { name: "Interests", href: "#interests" },
   { name: "Contact", href: "#contact" },
 ];
 

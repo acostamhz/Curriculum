@@ -6,6 +6,7 @@ import { ArrowRight, Brain, ShieldCheck, Server } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 import HeroBadges from "./HeroBadges";
 
@@ -18,11 +19,11 @@ export default function HeroContent() {
       className="flex flex-col"
     >
       <Badge
-        variant="outline"
-        className="mb-6 w-fit rounded-full px-4 py-1"
-      >
-        Available for new opportunities
-      </Badge>
+      variant="outline"
+      className="mb-6 w-fit rounded-full px-6 py-6 text-base font-medium leading-none"
+        >
+      Available for new opportunities
+    </Badge>
 
       <motion.h1
         initial={{ opacity: 0, y: 25 }}
@@ -32,7 +33,7 @@ export default function HeroContent() {
       >
         Jhoan Camilo
         <br />
-        Acosta Galíndez
+        Acosta Galindez
       </motion.h1>
 
       <motion.p
@@ -45,19 +46,27 @@ export default function HeroContent() {
       </motion.p>
 
       <div className="mt-10 flex flex-wrap gap-4">
-        <Button size="lg" className="gap-2 rounded-full">
-          {portfolio.buttons.projects}
-          <ArrowRight className="h-4 w-4" />
-        </Button>
+  <Link
+    href="https://github.com/acostamhz"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Button size="lg" className="gap-2 rounded-full">
+      {portfolio.buttons.projects}
+      <ArrowRight className="h-4 w-4" />
+    </Button>
+  </Link>
 
-        <Button
-          size="lg"
-          variant="outline"
-          className="rounded-full"
-        >
-          {portfolio.buttons.contact}
-        </Button>
-      </div>
+  <Link href="#contact">
+    <Button
+      size="lg"
+      variant="outline"
+      className="rounded-full"
+    >
+      {portfolio.buttons.contact}
+    </Button>
+  </Link>
+</div>
 
       <HeroBadges />
     </motion.div>

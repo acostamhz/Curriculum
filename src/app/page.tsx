@@ -5,6 +5,7 @@ import Timeline from "@/components/timeline/Timeline";
 import Stack from "@/components/stack/Stack";
 import Projects from "@/components/projects/Projects";
 import Certifications from "@/components/certifications/Certifications";
+import Interests from "@/components/interests/Interests";
 import Contact from "@/components/contact/Contact";
 import Assistant from "@/components/assistant/Assistant";
 
@@ -19,6 +20,7 @@ export default function Home() {
       <Stack />
       <Projects />
       <Certifications />
+      <Interests />
       <Assistant />
       <Contact />
     </>
