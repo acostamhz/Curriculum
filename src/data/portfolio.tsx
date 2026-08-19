@@ -87,38 +87,38 @@ export const portfolio = {
 
   items: [
     {
-      year: "2020",
+      year: "July 2020",
       title: "Software Engineering",
       description:
         "Started my Software Engineering degree at Universidad Autónoma de Occidente, building a strong foundation in programming, algorithms and software architecture.",
     },
 
     {
-      year: "2023",
-      title: "Healthcare Platform",
-      description:
-        "Developed a university project focused on supporting Alzheimer's patients through a digital healthcare platform.",
-    },
-
-    {
-      year: "2024",
+      year: "August 2024",
       title: "Founded Grupo Caishen S.A.S.",
       description:
-        "Created my own technology company to develop innovative software products and AI-driven business solutions.",
+        "Acquires and manages companies across various sectors, building a diversified business portfolio. Its long-term vision is to create a strong and sustainable business group through strategic acquisitions and professional management.",
     },
 
     {
-      year: "2025",
-      title: "Founded Hobisu™",
+      year: "March 2025",
+      title: "Founded Hobisu",
       description:
         "Currently driving the growth of an Apple device import and distribution business, delivering premium technology products with a focus on quality, reliability, and customer experience.",
     },
 
     {
-      year: "2026",
-      title: "Business AI",
+      year: "August 2026",
+      title: "Founded Zendcode S.A.S.",
       description:
-        "Currently developing an AI-powered virtual business manager that helps small businesses make smarter decisions through automation, analytics and artificial intelligence.",
+        "A technology company building AI-powered solutions that simplify business management and decision-making. We create accessible and intelligent software that helps businesses operate more efficiently, starting with Luka AI, our virtual manager for small businesses.",
+    },
+
+    {
+      year: "September 2026",
+      title: "Cali Emergencia",
+      description:
+        "An open-source, nonprofit humanitarian platform created to support communities affected by the 7.4-magnitude earthquake in Colombia in August 2026. It helps coordinate critical information, connect people with assistance, and strengthen community response during emergencies.",
     },
   ],
 },
@@ -219,14 +219,14 @@ projects: {
 
   items: [
     {
-      title: "Business AI",
+      title: "Luka AI",
 
       description:
         "AI-powered virtual business manager that helps small businesses automate decisions, analyze sales and optimize resources.",
 
       image: "/projects/business-ai.png",
 
-      github: "https://github.com/acostamhz/GerenteAI",
+      github: "https://github.com/acostamhz/GerenteAI/tree/develop",
 
       demo: "#",
 
@@ -258,16 +258,16 @@ projects: {
     },
 
     {
-      title: "Healthcare Platform",
+      title: "Cali Emergencia",
 
       description:
-        "University project focused on supporting Alzheimer's patients through a secure digital platform.",
+        "An open-source and nonprofit platform created to support communities affected by the earthquake in Colombia",
 
-      image: "/projects/healthcare.png",
+      image: "/projects/cali-emergencia.png",
 
-      github: "https://github.com/khrszna/DoURemember/tree/Camilo",
+      github: "https://github.com/acostamhz/Emergencia",
 
-      demo: "#",
+      demo: "https://www.caliemergencia.site",
 
       technologies: [
         "Java",
@@ -441,10 +441,11 @@ assistant: {
   suggestions: [
     "Tell me about yourself",
     "Explain Business AI",
-    "What backend technologies do you use?",
+    "What backend technologies does he know how to use?",
     "Tell me about Grupo Caishen",
     "Why cybersecurity?",
-    "Show your certifications",
+    "Show his certifications",
+    "Explain Cali Emergencia",
   ],
   
 },
