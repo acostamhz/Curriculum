@@ -18,6 +18,7 @@ const links = [
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -38,13 +39,13 @@ export default function Navbar() {
       <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-  <img
-  src="/favicon.png"
-  alt="Logo"
-  width={42}
-  height={42}
-/>
-</Link>
+          <img
+            src="/favicon.png"
+            alt="Logo"
+            width={42}
+            height={42}
+          />
+        </Link>
 
         {/* Navigation */}
         <nav className="hidden md:block">
@@ -85,14 +86,38 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Button */}
         <button
-          className="rounded-lg p-2 transition-colors hover:bg-white/10 md:hidden"
+          type="button"
+          onClick={() => setMenuOpen((prev) => !prev)}
           aria-label="Open menu"
+          aria-expanded={menuOpen}
+          className="rounded-lg p-2 transition-colors hover:bg-white/10 md:hidden"
         >
           <Menu size={22} />
         </button>
       </div>
+
+      {/* Mobile Navigation */}
+      {menuOpen && (
+        <div className="border-t border-white/10 bg-black/90 backdrop-blur-xl md:hidden">
+          <nav className="mx-auto max-w-7xl px-6 py-5">
+            <ul className="flex flex-col gap-1">
+              {links.map((item) => (
+                <li key={item.name}>
+                  <a
+                    href={item.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="block rounded-lg px-3 py-3 text-sm font-medium text-zinc-400 transition-colors duration-300 hover:bg-white/10 hover:text-white"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

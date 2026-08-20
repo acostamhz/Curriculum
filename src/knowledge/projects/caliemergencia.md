@@ -38,3 +38,8 @@ It helps coordinate critical information, connect people with assistance, and st
 ## Objective
 
 The project aims to provide a free, open-source, and community-driven tool that helps people coordinate information and assistance during emergencies and natural disasters.
+
+## Technologies
+
+- JavaScript
+- Next.js
