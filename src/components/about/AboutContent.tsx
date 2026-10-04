@@ -2,9 +2,11 @@
 
 import { motion } from "framer-motion";
 
-import { portfolio } from "@/data/portfolio";
+import { usePortfolio } from "@/i18n/LanguageProvider";
 
 export default function AboutContent() {
+  const portfolio = usePortfolio();
+
   return (
     <motion.div
       initial={{ opacity: 0, x: -40 }}

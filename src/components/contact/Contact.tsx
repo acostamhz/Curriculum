@@ -1,31 +1,26 @@
-"use client";
+﻿"use client";
+
+import RevealSection from "@/components/ui/RevealSection";
 
 import ContactHeader from "./ContactHeader";
 import ContactCard from "./ContactCard";
 import ContactCTA from "./ContactCTA";
 
-import { portfolio } from "@/data/portfolio";
+import { usePortfolio } from "@/i18n/LanguageProvider";
 
 export default function Contact() {
-  return (
-    <section
-      id="contact"
-      className="relative overflow-hidden py-32"
-    >
-      <div
-        className="
-          absolute
-          inset-0
-          -z-10
-          bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.08),transparent_70%)]
-        "
-      />
+  const portfolio = usePortfolio();
 
+  return (
+    <RevealSection
+      id="contact"
+      className="relative overflow-hidden py-20"
+    >
       <div className="mx-auto max-w-7xl px-6">
 
         <ContactHeader />
 
-        <div className="mt-20 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
           {portfolio.contact.items.map((item, index) => (
             <ContactCard
               key={item.title}
@@ -38,6 +33,6 @@ export default function Contact() {
         <ContactCTA />
 
       </div>
-    </section>
+    </RevealSection>
   );
 }

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Award, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { useLanguage } from "@/i18n/LanguageProvider";
 
 interface Props {
   certification: {
@@ -19,6 +20,8 @@ export default function CertificationCard({
   certification,
   index,
 }: Props) {
+  const { language } = useLanguage();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 35 }}
@@ -62,7 +65,7 @@ export default function CertificationCard({
           href={certification.credential}
           className="flex items-center gap-2 text-blue-400 transition hover:text-blue-300"
         >
-          Credential
+          {language === "es" ? "Ver certificado" : "Credential"}
 
           <ArrowUpRight size={18} />
         </Link>

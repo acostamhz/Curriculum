@@ -1,14 +1,21 @@
-import { portfolio } from "@/data/portfolio";
+﻿"use client";
+
+import RevealSection from "@/components/ui/RevealSection";
+
+import { usePortfolio } from "@/i18n/LanguageProvider";
 
 import InterestsHeader from "./InterestsHeader";
 import InterestsGrid from "./InterestsGrid";
 
 export default function Interests() {
+  const portfolio = usePortfolio();
+
   return (
-    <section
+    <RevealSection
       id="interests"
-      className="container mx-auto px-6 py-28"
+      className="relative py-20"
     >
+      <div className="mx-auto max-w-7xl px-6">
       <InterestsHeader
         title={portfolio.interests.title}
         heading={portfolio.interests.heading}
@@ -16,6 +23,7 @@ export default function Interests() {
       />
 
       <InterestsGrid items={portfolio.interests.items} />
-    </section>
+      </div>
+    </RevealSection>
   );
 }

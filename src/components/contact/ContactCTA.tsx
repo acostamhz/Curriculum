@@ -2,15 +2,18 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/i18n/LanguageProvider";
 
 export default function ContactCTA() {
+  const { ui } = useLanguage();
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ delay: 0.3 }}
-      className="mt-20 flex justify-center"
+      className="mt-12 flex justify-center"
     >
       <a
         href="mailto:acostadevices@icloud.com"
@@ -20,7 +23,7 @@ export default function ContactCTA() {
           size="lg"
           className="rounded-full px-10 py-7 text-base"
         >
-          Let's work together
+          {ui.contact.cta}
         </Button>
       </a>
     </motion.div>

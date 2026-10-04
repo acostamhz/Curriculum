@@ -7,13 +7,16 @@ import { UIMessage } from "./types";
 import { parseTools } from "@/assistant/parser";
 import { runTools } from "@/assistant/run-tools";
 
-export function useAssistant() {
-  const [messages, setMessages] = useState<UIMessage[]>([
+export function useAssistant(
+  language: "en" | "es",
+  greeting: string,
+  errorMessage: string,
+) {
+  const [messages, setMessages] = useState<UIMessage[]>(() => [
     {
       id: crypto.randomUUID(),
       role: "assistant",
-      content:
-        "👋 Hi! I'm Jhoan's AI Assistant. Ask me anything about my experience, projects or skills.",
+      content: greeting,
     },
   ]);
 
@@ -48,8 +51,8 @@ export function useAssistant() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          sessionId: "portfolio",
           message,
+          language,
         }),
         signal: controller.signal,
       });
@@ -132,8 +135,7 @@ export function useAssistant() {
           {
             id: crypto.randomUUID(),
             role: "assistant",
-            content:
-              "❌ Sorry, something went wrong while contacting the AI.",
+            content: errorMessage,
           },
         ]);
       }
@@ -152,7 +154,10 @@ export function useAssistant() {
   }
 
   return {
-    messages,
+    messages:
+      messages.length === 1 && messages[0].role === "assistant"
+        ? [{ ...messages[0], content: greeting }]
+        : messages,
     input,
     setInput,
     isLoading,

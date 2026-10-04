@@ -1,8 +1,10 @@
-# AI Portfolio
+# Curriculum (this AI Portfolio)
 
-This portfolio is not a traditional resume website.
+This portfolio is not a traditional resume website. It is a bilingual (English / Spanish) personal portfolio with an AI assistant named June, where visitors can ask about Jhoan's experience, projects and skills.
 
-It is an AI-powered portfolio where visitors can interact with an intelligent assistant that answers questions about Jhoan's experience, projects and skills.
+## Links
+
+- GitHub: https://github.com/acostamhz/Curriculum
 
 ## Technologies
 
@@ -10,25 +12,20 @@ It is an AI-powered portfolio where visitors can interact with an intelligent as
 - React 19
 - TypeScript
 - Tailwind CSS
+- Framer Motion
 
 ## Artificial Intelligence
 
 - Google Gemini
 - AI SDK
 - Streaming Responses
-- Markdown Rendering
 - Conversation Memory
-- Retrieval-Augmented Generation
+- Retrieval-Augmented Generation (embeddings and semantic search)
 
 ## Features
 
-- Conversational assistant
-- Semantic search
-- Markdown support
-- Syntax highlighting
-- Tool execution
-- Modular architecture
-
-## Objective
-
-The project demonstrates practical knowledge of modern AI application development using production-ready architecture.
+- Language switch (English / Spanish)
+- Conversational assistant (June)
+- Tool execution (open GitHub/LinkedIn, jump to sections)
+- Liquid-glass navigation bar
+- Animated tech marquee and section reveal animations

@@ -4,7 +4,8 @@ import { askGemini } from "../providers/gemini.provider";
 
 export async function chat(
   sessionId: string,
-  message: string
+  message: string,
+  language: "en" | "es" = "en",
 ): Promise<string> {
   addMessage(sessionId, {
     role: "user",
@@ -15,7 +16,8 @@ export async function chat(
 
   const prompt = await buildPrompt(
     message,
-    history
+    history,
+    language,
   );
 
   const reply = await askGemini(prompt);

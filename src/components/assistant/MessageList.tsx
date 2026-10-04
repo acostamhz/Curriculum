@@ -19,12 +19,19 @@ export default function MessageList({
 
   // Evita hacer scroll en el primer render
   const firstRender = useRef(true);
+  const previousCount = useRef(messages.length);
 
   useEffect(() => {
+    // Cambiar de idioma reemplaza el saludo sin agregar mensajes: no hacer scroll
+    const countChanged = previousCount.current !== messages.length;
+    previousCount.current = messages.length;
+
     if (firstRender.current) {
       firstRender.current = false;
       return;
     }
+
+    if (!countChanged && !isLoading) return;
 
     bottomRef.current?.scrollIntoView({
       behavior: "smooth",

@@ -1,14 +1,18 @@
-"use client";
+﻿"use client";
 
-import { portfolio } from "@/data/portfolio";
+import RevealSection from "@/components/ui/RevealSection";
+
+import { usePortfolio } from "@/i18n/LanguageProvider";
 
 import StackCategory from "./StackCategory";
 
 export default function Stack() {
+  const portfolio = usePortfolio();
+
   return (
-    <section
+    <RevealSection
       id="stack"
-      className="relative py-32"
+      className="relative py-20"
     >
       <div className="mx-auto max-w-7xl px-6">
 
@@ -28,7 +32,7 @@ export default function Stack() {
 
         </div>
 
-        <div className="mt-20 grid gap-8 lg:grid-cols-2">
+        <div className="mt-12 grid gap-8 lg:grid-cols-2">
           {portfolio.stack.categories.map((category) => (
             <StackCategory
               key={category.name}
@@ -38,6 +42,6 @@ export default function Stack() {
         </div>
 
       </div>
-    </section>
+    </RevealSection>
   );
 }

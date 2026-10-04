@@ -14,7 +14,7 @@ His main areas of interest include:
 - Large Language Models (LLMs)
 - Retrieval-Augmented Generation (RAG)
 - AI Agents
-- Backend Architecture
+- Frontend Architecture
 - Cloud Computing
 - Cybersecurity
 - DevOps
@@ -33,7 +33,7 @@ He enjoys creating software that goes beyond traditional applications by using A
 He is especially interested in:
 
 - Building AI-powered products
-- Designing scalable backend systems
+- Designing scalable frontend systems
 - Automating repetitive processes
 - Connecting AI with real-world data
 - Exploring emerging technologies

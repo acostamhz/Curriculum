@@ -2,24 +2,23 @@
 
 ## Name
 
-Jhoan Camilo Acosta
+Jhoan Camilo Acosta Galíndez
 
 ## Profession
 
-Software Engineer
+Software Engineer (Cybersecurity specialist and AI builder)
 
 ## Specializations
 
 - Artificial Intelligence
-- Backend Development
+- Frontend Engineering
 - Cybersecurity
 - Cloud Computing
 
 ## Areas of expertise
 
-- API Development
-- AI Integration
-- RAG Systems
+- Web application development (Next.js, React)
+- AI integration and RAG systems
 - Conversational AI
 - PostgreSQL
 - Docker
@@ -37,4 +36,4 @@ Software Engineer
 
 Spanish (Native)
 
-English (Technical)
+English (B1 course completed, technical English)

@@ -1,13 +1,15 @@
 import { buildKnowledgeBase } from "./indexer";
 
-let initialized = false;
+let initialization: Promise<void> | null = null;
 
-export async function initializeKnowledgeBase() {
-  if (initialized) {
-    return;
+// Se reintenta si falla (por ejemplo, por una API key ausente) en lugar de quedar vacío para siempre.
+export function initializeKnowledgeBase() {
+  if (!initialization) {
+    initialization = buildKnowledgeBase().catch((error) => {
+      initialization = null;
+      throw error;
+    });
   }
 
-  initialized = true;
-
-  await buildKnowledgeBase();
+  return initialization;
 }

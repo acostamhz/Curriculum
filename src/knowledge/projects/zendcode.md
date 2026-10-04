@@ -1,33 +1,7 @@
-# Zendcode
+# Zendcode S.A.S.
 
-Zendcode is a company focused on acquiring and managing businesses with long-term growth potential.
+Zendcode is a technology company building AI-powered solutions that simplify business management and decision-making. It creates accessible and intelligent software that helps businesses operate more efficiently.
 
-It combines strategic management, entrepreneurship, and technology to build a diversified and sustainable business group.
+Its first product is Luka AI, a virtual manager for small businesses.
 
-## Business Model
-
-- Company acquisitions
-- Business management
-- Strategic investments
-- Portfolio development
-- Long-term value creation
-
-## Focus
-
-- Business development
-- Technology
-- Digital businesses
-- Strategic growth
-- Operational management
-
-## Vision
-
-- Build a diversified business group
-- Acquire companies with strong growth potential
-- Professionalize and optimize acquired businesses
-- Create long-term value through strategic management
-- Develop technology-driven ventures
-
-## Objective
-
-The company aims to build a strong and sustainable business group by acquiring, managing, and developing companies with long-term potential.
+Jhoan worked with Zendcode as a freelance software developer, building Luka AI (NestJS, OpenAI, PostgreSQL, Docker). He was not an employee of the company.

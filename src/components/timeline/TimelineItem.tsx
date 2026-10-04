@@ -32,7 +32,7 @@ export default function TimelineItem({
           {item.year}
         </span>
 
-        <h3 className="mt-3 text-2xl font-bold text-white">
+        <h3 className="mt-3 text-2xl font-bold text-foreground">
           {item.title}
         </h3>
 

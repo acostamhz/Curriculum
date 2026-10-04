@@ -6,12 +6,13 @@ import {
   Square,
 } from "lucide-react";
 
-import { portfolio } from "@/data/portfolio";
+import { useLanguage } from "@/i18n/LanguageProvider";
 
 import { useAssistant } from "./useAssistant";
 import MessageList from "./MessageList";
 
 export default function ChatWindow() {
+  const { language, portfolio, ui } = useLanguage();
   const {
     messages,
     input,
@@ -19,7 +20,7 @@ export default function ChatWindow() {
     sendMessage,
     stopGeneration,
     isLoading,
-  } = useAssistant();
+  } = useAssistant(language, ui.assistant.greeting, ui.assistant.error);
 
   return (
     <div
@@ -41,11 +42,11 @@ export default function ChatWindow() {
 
         <div>
           <h3 className="font-bold">
-            AI Assistant
+            {ui.assistant.title}
           </h3>
 
           <p className="text-sm text-zinc-400">
-            Ask me anything about Jhoan&apos;s experience.
+            {ui.assistant.subtitle}
           </p>
         </div>
       </div>
@@ -114,7 +115,7 @@ export default function ChatWindow() {
               sendMessage(input);
             }
           }}
-          placeholder="Ask me anything..."
+          placeholder={ui.assistant.placeholder}
           disabled={isLoading}
           className="
             flex-1
@@ -148,7 +149,7 @@ export default function ChatWindow() {
               duration-300
               hover:bg-red-500
             "
-            title="Stop generation"
+            title={ui.assistant.stop}
           >
             <Square size={18} />
           </button>
@@ -161,17 +162,17 @@ export default function ChatWindow() {
               items-center
               justify-center
               rounded-2xl
-              bg-blue-600
+              bg-primary
               px-6
               text-white
               transition-all
               duration-300
-              hover:bg-blue-500
+              hover:bg-primary/85
               disabled:cursor-not-allowed
               disabled:bg-zinc-700
               disabled:opacity-50
             "
-            title="Send message"
+            title={ui.assistant.send}
           >
             <Send size={20} />
           </button>

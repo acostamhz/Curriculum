@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
 
+import { useLanguage } from "@/i18n/LanguageProvider";
 import TechBadge from "./TechBadge";
 
 interface Props {
@@ -27,6 +28,8 @@ export default function ProjectCard({
   project,
   index,
 }: Props) {
+  const { ui } = useLanguage();
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 40 }}
@@ -51,7 +54,7 @@ export default function ProjectCard({
         transition-all
         duration-500
         hover:border-blue-500/30
-        hover:shadow-[0_20px_80px_rgba(59,130,246,0.15)]
+        hover:shadow-[0_20px_80px_rgba(201,255,0,0.10)]
       "
     >
       <div className="relative aspect-video overflow-hidden">
@@ -88,7 +91,7 @@ export default function ProjectCard({
               text-blue-400
             "
           >
-            Featured Project
+            {ui.project.featured}
           </span>
         </div>
 
@@ -159,14 +162,14 @@ export default function ProjectCard({
               py-3
               text-sm
               font-medium
-              text-white
+              text-primary-foreground
               transition-all
               duration-300
               hover:scale-105
               hover:bg-blue-500
             "
           >
-            Live Demo
+            {ui.project.demo}
 
             <ArrowUpRight size={18} />
           </Link>

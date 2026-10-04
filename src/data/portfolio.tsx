@@ -35,12 +35,12 @@ export const portfolio = {
 
   buttons: {
     projects: "View Projects",
-    contact: "Contact Me",
+    contact: "Contact me",
   },
 
   badges: [
     "Artificial Intelligence",
-    "Backend Engineering",
+    "Frontend Engineering",
     "Cybersecurity",
   ],
 
@@ -53,7 +53,7 @@ export const portfolio = {
 
     heading: "Building software that solves real-world business problems.",
 
-    description: `I'm a Software Engineering graduate passionate about backend development,
+    description: `I'm a Software Engineering graduate passionate about frontend development,
     artificial intelligence and cybersecurity. I enjoy creating scalable
     applications, learning new technologies and designing solutions that
     combine clean architecture with exceptional user experiences.`,
@@ -80,7 +80,7 @@ export const portfolio = {
   timeline: {
   title: "Journey",
 
-  heading: "My journey from software engineering student to AI entrepreneur.",
+  heading: "My journey from software engineering student to freelance software developer.",
 
   description:
     "Driven by curiosity, continuous learning and entrepreneurship, every milestone has strengthened my ability to design secure, scalable and intelligent software solutions. Graduated with a semester average of 4.5/5.0 according to university statistics.",
@@ -95,30 +95,30 @@ export const portfolio = {
 
     {
       year: "August 2024",
-      title: "Founded Grupo Caishen S.A.S.",
+      title: "Freelance Web Developer",
       description:
-        "Acquires and manages companies across various sectors, building a diversified business portfolio. Its long-term vision is to create a strong and sustainable business group through strategic acquisitions and professional management.",
+        "As a freelancer, I built the corporate website for Grupo Caishen, a business group that acquires and manages companies across various sectors, using Next.js, TypeScript and Tailwind CSS with a modern design and a scalable architecture.",
     },
 
     {
       year: "March 2025",
-      title: "Founded Hobisu",
+      title: "Freelance Developer",
       description:
-        "Currently driving the growth of an Apple device import and distribution business, delivering premium technology products with a focus on quality, reliability, and customer experience.",
+        "As a freelancer, I delivered software and technology work for Hobisu, an Apple device import and distribution business, supporting its growth and a reliable customer experience.",
     },
 
     {
       year: "August 2026",
-      title: "Founded Zendcode S.A.S.",
+      title: "Freelance Software Developer",
       description:
-        "A technology company building AI-powered solutions that simplify business management and decision-making. We create accessible and intelligent software that helps businesses operate more efficiently, starting with Luka AI, our virtual manager for small businesses.",
+        "As a freelancer, I developed Luka AI for Zendcode, a technology company building AI-powered solutions for business management. Luka is a virtual manager that helps small businesses operate more efficiently, built with NestJS, OpenAI, PostgreSQL and Docker.",
     },
 
     {
       year: "September 2026",
       title: "Cali Emergencia",
       description:
-        "An open-source, nonprofit humanitarian platform created to support communities affected by the 7.4-magnitude earthquake in Colombia in August 2026. It helps coordinate critical information, connect people with assistance, and strengthen community response during emergencies.",
+        "Freelance project: developed with Next.js, TypeScript and Tailwind CSS an open-source, nonprofit humanitarian platform created to support communities affected by the 7.4-magnitude earthquake in Colombia in August 2026. It helps coordinate critical information, connect people with assistance, and strengthen community response during emergencies.",
     },
   ],
 },
@@ -143,22 +143,17 @@ stack: {
     },
 
     {
-      name: "Backend",
+      name: "Frontend",
       items: [
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "HTML5",
+        "CSS3",
         "NestJS",
         "Spring Boot",
         "Express",
         "FastAPI",
-      ],
-    },
-
-    {
-      name: "Databases",
-      items: [
-        "PostgreSQL",
-        "MySQL",
-        "SQL Server",
-        "Oracle",
       ],
     },
 
@@ -197,16 +192,6 @@ stack: {
         "Figma",
       ],
     },
-    {
-      name: "Frontend",
-      items: [
-        "Next.js",
-        "React",
-        "Tailwind CSS",
-        "HTML5",
-        "CSS3",
-      ],
-    },
   ],
 },
 projects: {
@@ -215,7 +200,7 @@ projects: {
   heading: "Software built to solve real problems.",
 
   description:
-    "A selection of projects that showcase my experience in backend development, artificial intelligence and software architecture.",
+    "A selection of projects that showcase my experience in frontend development, artificial intelligence and software architecture.",
 
   items: [
     {
@@ -224,11 +209,11 @@ projects: {
       description:
         "AI-powered virtual business manager that helps small businesses automate decisions, analyze sales and optimize resources.",
 
-      image: "/projects/business-ai.png",
+      image: "/projects/luka.png",
 
       github: "https://github.com/acostamhz/GerenteAI/tree/develop",
 
-      demo: "#",
+      demo: "https://www.luka.finance",
 
       technologies: [
         "NestJS",
@@ -270,9 +255,28 @@ projects: {
       demo: "https://www.caliemergencia.site",
 
       technologies: [
-        "Java",
-        "Spring Boot",
-        "MySQL",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+      ],
+    },
+
+    {
+      title: "Curriculum",
+
+      description:
+        "Bilingual personal portfolio with an AI assistant that showcases my experience, projects and technical skills.",
+
+      image: "/projects/curriculum.png",
+
+      github: "https://github.com/acostamhz/Curriculum",
+
+      demo: "https://www.acostamhz.dev",
+
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
       ],
     },
   ],
@@ -283,7 +287,7 @@ certifications: {
   heading: "Continuous learning is part of my engineering mindset.",
 
   description:
-    "My academic background, language studies and professional certifications reflect my commitment to continuous learning in software engineering, artificial intelligence, databases, cybersecurity and finance.",
+    "My academic background, language studies and professional certifications reflect my commitment to continuous learning in software engineering, artificial intelligence, cybersecurity and finance.",
 
   items: [
 
@@ -402,7 +406,7 @@ contact: {
   heading: "Let's build something great together.",
 
   description:
-    "I'm always interested in ambitious ideas involving artificial intelligence, backend engineering, cybersecurity and startups.",
+    "I'm always interested in ambitious ideas involving artificial intelligence, frontend engineering, cybersecurity and startups.",
 
   items: [
     {
@@ -440,8 +444,8 @@ assistant: {
 
   suggestions: [
     "Tell me about yourself",
-    "Explain Business AI",
-    "What backend technologies does he know how to use?",
+    "Explain Luka AI",
+    "What frontend technologies does he know how to use?",
     "Tell me about Grupo Caishen",
     "Why cybersecurity?",
     "Show his certifications",

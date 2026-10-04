@@ -35,7 +35,7 @@ export default function Message({
           overflow-hidden
           ${
             isUser
-              ? "bg-blue-600 text-white"
+              ? "bg-blue-600 text-primary-foreground"
               : "border border-white/10 bg-white/5 text-zinc-200"
           }
         `}

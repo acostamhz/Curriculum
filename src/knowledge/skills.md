@@ -1,53 +1,57 @@
 # Technical Skills
 
-## Programming Languages
+## Languages
 
-- TypeScript
+- Java
 - JavaScript
+- TypeScript
 - Python
 - SQL
 
 ## Frontend
 
-- React
 - Next.js
+- React
 - Tailwind CSS
-
-## Backend
-
+- HTML5
+- CSS3
 - NestJS
-- Node.js
+- Spring Boot
 - Express
-
-## Artificial Intelligence
-
-- Google Gemini
-- OpenAI
-- AI SDK
-- Prompt Engineering
-- RAG
-- Embeddings
-- Streaming
-- Conversation Memory
-
-## Database
-
-- PostgreSQL
-- Prisma ORM
+- FastAPI
 
 ## DevOps
 
 - Docker
 - Git
-- GitHub
+- GitHub Actions
+- Linux
+
+## Artificial Intelligence
+
+- OpenAI
+- Google Gemini
+- AI SDK
+- Prompt Engineering
+- RAG and embeddings
+- Streaming and conversation memory
 
 ## Cloud
 
+- Vercel
+- Railway
 - Google Cloud
-- AWS (Learning)
+- Firebase
+
+## Tools
+
+- VS Code
+- Postman
+- GitHub
+- Figma
 
 ## Cybersecurity
 
-- Security Best Practices
+- Security best practices
 - Authentication
-- API Security
+- API security

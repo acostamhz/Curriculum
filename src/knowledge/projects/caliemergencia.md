@@ -2,14 +2,18 @@
 
 Cali Emergencia is an open-source, nonprofit humanitarian platform created to support communities affected by the 7.4-magnitude earthquake in Colombia in August 2026.
 
-It helps coordinate critical information, connect people with assistance, and strengthen community response during emergency situations.
+It helps coordinate critical information, connect people with assistance, and strengthen community response during emergencies. Jhoan developed it as a freelance project.
+
+## Links
+
+- Website: https://www.caliemergencia.site
+- GitHub: https://github.com/acostamhz/Emergencia
 
 ## Technologies
 
-- Open Source
-- Web Platform
-- Geospatial Technologies
-- Real-Time Information
+- Next.js
+- TypeScript
+- Tailwind CSS
 
 ## Humanitarian Response
 
@@ -28,18 +32,6 @@ It helps coordinate critical information, connect people with assistance, and st
 - Open-source development
 - Accessible humanitarian tools
 
-## Mission
-
-- Support communities during disasters
-- Facilitate access to critical information
-- Connect people with available assistance
-- Encourage collaborative emergency response
-
 ## Objective
 
-The project aims to provide a free, open-source, and community-driven tool that helps people coordinate information and assistance during emergencies and natural disasters.
-
-## Technologies
-
-- JavaScript
-- Next.js
+Provide a free, open-source, community-driven tool that helps people coordinate information and assistance during emergencies and natural disasters.

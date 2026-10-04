@@ -1,9 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { portfolio } from "@/data/portfolio";
+import { usePortfolio } from "@/i18n/LanguageProvider";
 
 export default function ProjectsHeader() {
+  const portfolio = usePortfolio();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}

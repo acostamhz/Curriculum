@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 
 import { Mail, MapPin, ArrowUpRight } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import { useLanguage } from "@/i18n/LanguageProvider";
 
 interface Props {
   item: {
@@ -21,12 +22,15 @@ export default function ContactCard({
   item,
   index,
 }: Props) {
+  const { language } = useLanguage();
+
   const icons = {
-  Email: Mail,
-  GitHub: FaGithub,
-  LinkedIn: FaLinkedinIn,
-  Location: MapPin,
-};
+    Email: Mail,
+    GitHub: FaGithub,
+    LinkedIn: FaLinkedinIn,
+    Location: MapPin,
+    Ubicación: MapPin,
+  };
 
   const Icon =
     icons[item.title as keyof typeof icons] ?? Mail;
@@ -43,7 +47,7 @@ export default function ContactCard({
     >
       <Link
         href={item.href}
-        target="_blank"
+        target={item.href.startsWith("mailto:") ? undefined : "_blank"}
         className="
           group
           flex
@@ -79,7 +83,11 @@ export default function ContactCard({
 
           <div>
             <h3 className="font-semibold">
-              {item.title}
+                {item.title === "Location" && language === "es"
+                  ? "Ubicación"
+                  : item.title === "Ubicación" && language === "en"
+                    ? "Location"
+                    : item.title}
             </h3>
 
             <p className="mt-1 text-zinc-400">

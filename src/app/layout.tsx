@@ -5,6 +5,7 @@ import "./globals.css";
 import "highlight.js/styles/github-dark.css";
 
 import { cn } from "@/lib/utils";
+import { LanguageProvider } from "@/i18n/LanguageProvider";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -36,7 +37,7 @@ export default function RootLayout({
       )}
     >
       <body className={inter.variable}>
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

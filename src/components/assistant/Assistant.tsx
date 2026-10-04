@@ -1,32 +1,25 @@
-"use client";
+﻿"use client";
+
+import RevealSection from "@/components/ui/RevealSection";
 
 import AssistantHeader from "./AssistantHeader";
 import ChatWindow from "./ChatWindow";
 
 export default function Assistant() {
   return (
-    <section
+    <RevealSection
       id="assistant"
-      className="relative overflow-hidden py-32"
+      className="relative overflow-hidden py-20"
     >
-      <div
-        className="
-          absolute
-          inset-0
-          -z-10
-          bg-[radial-gradient(circle_at_top,rgba(59,130,246,.08),transparent_70%)]
-        "
-      />
-
       <div className="mx-auto max-w-6xl px-6">
 
         <AssistantHeader />
 
-        <div className="mt-20">
+        <div className="mt-12">
           <ChatWindow />
         </div>
 
       </div>
-    </section>
+    </RevealSection>
   );
 }

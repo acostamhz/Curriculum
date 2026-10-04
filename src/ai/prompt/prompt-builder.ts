@@ -7,7 +7,8 @@ import { searchKnowledge } from "../rag/search";
 
 export async function buildPrompt(
   message: string,
-  history: ChatMessage[]
+  history: ChatMessage[],
+  language: "en" | "es" = "en",
 ): Promise<string> {
   const knowledge = await searchKnowledge(
     message
@@ -25,6 +26,8 @@ ${item.content}
 
   return `
 ${systemPrompt}
+
+Reply in ${language === "es" ? "Spanish" : "English"}, matching the language selected by the visitor.
 
 ${buildPortfolioContext()}
 
