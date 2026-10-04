@@ -139,14 +139,14 @@ html {
 
 body {
   min-height: 100vh;
-  overflow-x: hidden;
+  min-height: 100dvh;
+  overflow-x: clip;
 
   font-family: var(--font-sans);
 
   background:
     radial-gradient(circle at 50% 20%, rgb(59 130 246 / 8%), transparent 70%),
     #050505;
-  background-attachment: fixed;
   color: var(--foreground);
 
   text-rendering: optimizeLegibility;
