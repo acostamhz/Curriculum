@@ -3,7 +3,6 @@ import { Tool } from "./tools";
 import { openGithub } from "./actions/github";
 import { openLinkedin } from "./actions/linkedin";
 import { downloadCV } from "./actions/cv";
-import { scrollToSection } from "./actions/scroll";
 
 export function dispatchTool(tool: Tool) {
   switch (tool) {
@@ -19,20 +18,11 @@ export function dispatchTool(tool: Tool) {
       downloadCV();
       break;
 
+    // La IA no debe mover la página: las acciones de navegación se ignoran.
     case Tool.GO_PROJECTS:
-      scrollToSection("projects");
-      break;
-
     case Tool.GO_CONTACT:
-      scrollToSection("contact");
-      break;
-
     case Tool.GO_ABOUT:
-      scrollToSection("about");
-      break;
-
     case Tool.GO_STACK:
-      scrollToSection("stack");
       break;
 
     default:

@@ -1,7 +1,7 @@
 "use client";
 
 import {
-  Send,
+  ArrowUp,
   Sparkles,
   Square,
 } from "lucide-react";
@@ -175,7 +175,7 @@ export default function ChatWindow() {
             "
             title={ui.assistant.send}
           >
-            <Send size={20} />
+            <ArrowUp size={22} strokeWidth={2.5} />
           </button>
         )}
       </div>
