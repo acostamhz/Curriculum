@@ -164,12 +164,13 @@ export default function ChatWindow() {
               rounded-2xl
               bg-primary
               px-6
-              text-white
+              text-primary-foreground
               transition-all
               duration-300
               hover:bg-primary/85
               disabled:cursor-not-allowed
               disabled:bg-zinc-700
+              disabled:text-white
               disabled:opacity-50
             "
             title={ui.assistant.send}
