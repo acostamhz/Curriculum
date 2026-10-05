@@ -23,11 +23,15 @@ ${item.content}
 `
     )
     .join("\n");
+  const responseGuidance = history.some((item) => item.role === "assistant")
+    ? "This is not the first assistant response in this conversation. Do not greet or introduce yourself; answer the visitor's current question directly."
+    : "This is the first assistant response in this conversation. Begin with a brief greeting identifying yourself as June, Jhoan Camilo's AI assistant, then answer the visitor's current question.";
 
   return `
 ${systemPrompt}
 
 Reply in ${language === "es" ? "Spanish" : "English"}, matching the language selected by the visitor.
+${responseGuidance}
 
 ${buildPortfolioContext()}
 

@@ -14,7 +14,7 @@ export default function HeroPhoto() {
       transition={{ duration: 0.8, delay: 0.3 }}
       className="flex w-full justify-center"
     >
-      <div className="hero-profile-card relative flex w-full max-w-[860px] items-center gap-7 overflow-hidden rounded-[28px] border border-white/10 p-5 text-left sm:gap-10 sm:p-6">
+      <div className="hero-profile-card relative flex w-full max-w-[860px] flex-col items-center gap-6 overflow-hidden rounded-[28px] border border-white/10 p-5 text-center sm:flex-row sm:gap-10 sm:p-6 sm:text-left">
         <div className="relative h-[200px] w-[165px] shrink-0 overflow-hidden rounded-[20px] sm:h-[250px] sm:w-[210px]">
           <Image
             src="/profile.jpg"
