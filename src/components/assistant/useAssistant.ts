@@ -29,6 +29,8 @@ export function useAssistant(
   async function sendMessage(message: string) {
     if (!message.trim() || isLoading) return;
 
+    const isFirstReply = !messages.some((item) => item.role === "user");
+
     const userMessage: UIMessage = {
       id: crypto.randomUUID(),
       role: "user",
@@ -53,6 +55,7 @@ export function useAssistant(
         body: JSON.stringify({
           message,
           language,
+          isFirstReply,
         }),
         signal: controller.signal,
       });

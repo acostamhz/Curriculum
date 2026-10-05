@@ -84,6 +84,7 @@ function readSessionId(request: Request): string | null {
 export interface ChatRequest {
   message: string;
   language: "en" | "es";
+  isFirstReply: boolean;
   sessionId: string;
   setCookie?: string;
 }
@@ -134,7 +135,7 @@ export async function parseChatRequest(
     return fail(400, "Invalid request.");
   }
 
-  const { message, language } = (body ?? {}) as Record<string, unknown>;
+  const { message, language, isFirstReply } = (body ?? {}) as Record<string, unknown>;
 
   if (typeof message !== "string" || !message.trim()) {
     return fail(400, "Message is required.");
@@ -159,6 +160,7 @@ export async function parseChatRequest(
     data: {
       message: message.trim(),
       language: language === "es" ? "es" : "en",
+      isFirstReply: isFirstReply === true,
       sessionId,
       setCookie,
     },

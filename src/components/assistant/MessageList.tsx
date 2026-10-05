@@ -33,10 +33,9 @@ export default function MessageList({
 
     if (!countChanged && !isLoading) return;
 
-    bottomRef.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "end",
-    });
+    // Desplaza solo el contenedor del chat; scrollIntoView movería también la página.
+    const container = bottomRef.current?.parentElement;
+    container?.scrollTo({ top: container.scrollHeight, behavior: "smooth" });
   }, [messages, isLoading]);
 
   return (

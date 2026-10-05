@@ -6,10 +6,10 @@ export async function POST(request: Request) {
 
   if (!parsed.ok) return parsed.response;
 
-  const { message, language, sessionId, setCookie } = parsed.data;
+  const { message, language, isFirstReply, sessionId, setCookie } = parsed.data;
 
   try {
-    const result = await streamChat(sessionId, message, language);
+    const result = await streamChat(sessionId, message, language, isFirstReply);
     const response = result.toTextStreamResponse();
 
     if (setCookie) response.headers.append("Set-Cookie", setCookie);

@@ -7,6 +7,7 @@ export async function streamChat(
   sessionId: string,
   message: string,
   language: "en" | "es" = "en",
+  isFirstReply = false,
 ) {
   await initializeKnowledgeBase();
 
@@ -16,6 +17,7 @@ export async function streamChat(
     message,
     history,
     language,
+    isFirstReply,
   );
 
   addMessage(sessionId, { role: "user", content: message });
